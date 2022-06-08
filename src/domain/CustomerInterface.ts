@@ -1,5 +1,5 @@
 export interface CustomerInterface {
-    id: string
+    id?: string
 
     first_name: string
 
