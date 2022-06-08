@@ -1,5 +1,11 @@
 import {CustomerInterface} from "../../../domain/CustomerInterface";
 
 export interface RepositoryInterface {
-    getById: (id: string) => Promise<CustomerInterface|undefined>
+    create: (customer: CustomerInterface) => Promise<RepositoryInterface>;
+
+    getById: (id: string) => Promise<CustomerInterface|undefined>;
+
+    get: () => Promise<CustomerInterface[]>
+
+    delete: (id: string) => Promise<boolean>
 }
